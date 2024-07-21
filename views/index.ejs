@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quote</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>welcome to Quotes That Speak to You</h1>
+    <form action="/" id="form" class="form" method="POST">
+        <select name="keyword" class="form-select">
+            <option value="" data-display="Select">Select keyword</option>
+          <option value="anxiety">Anxiety</option>
+          <option value="change">Change</option>
+          <option value="choice">Choice</option>
+          <option value="confidence">Confidence</option>
+          <option value="courage">Courage</option>
+          <option value="death">Death</option>
+          <option value="dreams">Dreams</option>
+          <option value="excellence">Excellence</option>
+         <option value="failure">Failure</option>
+          <option value="fairness">Fairness</option>
+          <option value="fear">Fear</option>
+          <option value="forgiveness">Forgiveness</option>
+          <option value="freedom">Freedom</option>
+          <option value="future">Future</option>
+          <option value="happiness">Happiness</option>
+          <option value="inspiration">Inspiration</option>
+          <option value="kindness">Kindness</option>
+          <option value="leadership">Leadership</option>
+          <option value="life">Life</option>
+          <option value="living">Living</option>
+          <option value="love">Love</option>
+          <option value="pain">Pain</option>
+          <option value="past">Past</option>
+          <option value="success">Success</option>
+          <option value="time">Time</option>
+          <option value="today">Today</option>
+          <option value="truth">Truth</option>
+          <option value="work">Work</option>
+        </select>
+        
+        <button type="submit" class="form-submit">Go</button>
+    </form>
+    <% if(locals.url){ %>
+    <img src="<%= url %>" alt="image with quote">
+    <%}else{%>
+        <p>Today's Quote</p>
+        <h2><%= quote %></h2>
+        <h3>- <%= author %></h3>
+    <%}%>
+
+    <footer>Made with &#128150; by Sumit</footer>
+    
+</body>
+</html>
